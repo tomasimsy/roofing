@@ -1,0 +1,187 @@
+
+$white: #fafafa;
+$dark: #0A0A0A;
+$primary: #013133;
+$secondary: #002A29;
+$light: #dce5e4;
+$body_color:#6a6a6a;
+
+$sm: 576px;
+$md:768px;
+$lg:1024px;
+$xxl:1400px;
+
+@font-face {
+    font-family: "bahnschrift";
+    src: url("../assets/font/bahnschrift.ttf");
+
+    // src: url("../assets/font/Aeonik-/Aeonik-Air.otf");
+    // src: url("../assets/font/Aeonik-Bold.otf")
+  }
+  
+
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    font-family: "bahnschrift";
+}
+
+//Custom Container
+.container-custom,
+.container-custom-fluid,
+.container-custom-xxl,
+.container-custom-xl,
+.container-custom-lg,
+.container-custom-md,
+.container-custom-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-custom-sm, .container-custom {
+    max-width: 540px;
+
+  }
+}
+@media (min-width: 768px) {
+  .container-custom-md, .container-custom-sm, .container-custom {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-custom-lg, .container-custom-md, .container-custom-sm, .container-custom {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-custom-xl, .container-custom-lg, .container-custom-md, .container-custom-sm, .container-custom {
+    max-width: 1275px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-custom-xxl, .container-custom-xl, .container-custom-lg, .container-custom-md, .container-custom-sm, .container-custom {
+    max-width: 1455px;
+  }
+}
+
+//Show on mobile
+.show_mobile{
+  
+  .sub_heading{
+    padding:10px 0;
+    font-size: 32pt;
+    letter-spacing: -3px;
+    line-height: 45px;
+    color: $white;
+  }
+  .phone_link{
+    font-size: 18pt;
+    letter-spacing: -1px;
+
+  }
+}
+//Navbar
+.navbar_logo{
+  
+  img{
+    width: 120px;
+    height: auto;
+  }
+
+
+}
+
+a{
+  text-decoration: none;
+}
+
+.phone_link{
+  font-size: clamp(1.5rem, 1.1667rem + 1.3333vw, 2rem);
+  font-weight: bolder;
+}
+
+.navbar_custom{
+
+  .mobile_logo{
+    width: 100px;
+    height: auto;
+  }
+
+  .sub_heading{
+    font-size: 24px;
+    background-color: $primary;
+  }
+
+
+}
+
+
+//Content
+.header_section{
+    position: relative;
+    background: rgb(1,27,28);
+    background: linear-gradient(0deg, rgba(1,27,28,1) 19%, rgba(1,49,51,1) 71%);
+    color: $white;
+    min-height: 100vh;
+    font-family: "bahnschrift";
+
+    img{
+        width: clamp(8rem, 3.714rem + 11.429vw, 14rem);
+        height: auto;
+    }
+
+    .logo_row{
+        padding: 7rem 0;
+
+        @media(max-width: $sm){
+          padding: 3rem 0;
+        }
+    }
+
+    .logo_title{
+        padding: 1rem 0;
+        font-size: clamp(1.5rem, .5rem + 3.333vw, 4rem);
+        font-weight: bold;
+        span::first-letter {
+            font-size: 120%;
+            // color: #8A2BE2;
+        }
+    }
+
+    .loading_content{
+        font-size: 18pt;
+    }
+    
+    .contact_content{
+        position: relative;
+        padding-top: 10rem;
+       
+
+        ul,li{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+
+.logo_title{
+  padding: 1rem 0;
+  font-size: clamp(1.5rem, .5rem + 3.333vw, 4rem);
+  font-weight: bold;
+  text-transform: uppercase;
+ 
+  h1::first-letter {
+      font-size: 120%;
+      // color: #8A2BE2;
+  }
+}
